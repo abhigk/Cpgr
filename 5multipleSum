@@ -12,7 +12,7 @@ C program to find the number of integers divisible by
 
 int main() {
 	
-	int intNum,finalNum,sum=0;
+	int intNum,finalNum,count=0,sum=0;
 	
 	
 	cout<<"Enter Initial Number";
@@ -23,10 +23,12 @@ int main() {
 	
 	for(int i=intNum;i<finalNum;i++){
 	    if(i%5==0){
-	        cout<<i;
+	        count++;
 	        sum=sum+i;
 	    }
 	}
+	
+	cout<<"Number of integer b/w range"<<count;
 	cout<<"Total sum of range is"<<sum;
 
 	
