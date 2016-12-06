@@ -1,0 +1,70 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	//C program to read two matrices and perform addition or subtraction .
+	//Also , find the trace of resultant matrix.
+	
+	int rowSize,colSize;
+	cin>>rowSize;
+	cin>>colSize;
+	
+	int arr1[rowSize][colSize];
+	int arr2[rowSize][colSize];
+	int arr3[rowSize][colSize];
+	
+	cout<<"Enter input for 1st matrix of size "<<rowSize<<"x"<<colSize;
+	for(int i=0;i<rowSize;i++){
+	    for(int j=0;j<colSize;j++){
+	        cin>>arr1[i][j];
+	    }
+	}
+	
+	cout<<"Enter input for 2nd matrix of size "<<rowSize<<"x"<<colSize<<" ";
+	for(int i=0;i<rowSize;i++){
+	    for(int j=0;j<colSize;j++){
+	        cin>>arr2[i][j];
+	    }
+	}
+	
+int option;
+cin>>option;
+	if(option==1){
+	//addition
+	for(int i=0;i<rowSize;i++)//for row
+        {
+            for(int j=0;j<colSize;j++)//for col
+            {
+                arr3[i][j]=arr1[i][j]+arr2[i][j];
+                cout<<arr3[i][j];
+            }
+            
+        }
+	}else if(option==2){
+// 		//subtraction
+	for(int i=0;i<rowSize;i++)//for row
+        {
+            for(int j=0;j<colSize;j++)//for col
+            {
+                arr3[i][j]=arr1[i][j]-arr2[i][j];
+                cout<<arr3[i][j];
+            }
+            
+        }
+	}
+	
+//Trace: Sum of diagonals
+//Finding Trace of resultant matrix
+int trace=0;
+for(int i=0;i<rowSize;i++){
+    for(int j=0;j<colSize;j++){
+        if(i==j){
+          trace+=arr3[i][j];  
+        }
+    }
+}
+cout<<trace;
+
+	
+	return 0;
+}
