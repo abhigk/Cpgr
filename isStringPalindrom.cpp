@@ -6,7 +6,7 @@ using namespace std;
 int main() {
 
     string s;
-    s="bbuttubb";
+    s="bbuttubb";//INPUT
     int size=s.size()-1;
 
     int isPalindrome=1;
@@ -18,6 +18,7 @@ int main() {
         }
     }
     
+	//OUTPUT
     if(isPalindrome==1){
         cout<<"Palindrome";}
  if(isPalindrome==0){
